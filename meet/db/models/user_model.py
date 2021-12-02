@@ -43,14 +43,14 @@ class User(AbstractBaseUser, BaseModel, PermissionsMixin):
     SEX = (
         ('male', 'male'),
         ('female', 'female'),
-        ('other', 'other'),
+        ('others', 'others'),
     )
     username = models.CharField(max_length=100, unique=True, db_index=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     sex = models.CharField(max_length=10, choices=SEX)
     email = models.EmailField()
-    about = models.TextField()
+    about = models.CharField(max_length=300)
     image = models.ImageField()
     github = models.URLField()
     linkedin = models.URLField()
