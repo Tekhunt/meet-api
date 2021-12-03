@@ -3,7 +3,7 @@ from .user_model import User
 from .abstract_base_model import BaseModel
 
 
-class UserProjects(models.Model, BaseModel):
+class UserProjects(models.Model):
     STATE = [
         ('Completed', 'Completed'),
         ('Ongoing', 'Ongoing')

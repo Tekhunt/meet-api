@@ -1,8 +1,7 @@
 from django.db import models
-from django.db.models import SET_NULL
-
-from .abstract_base_model import BaseModel
 from .user_model import User
+from django.db.models import SET_NULL
+from .abstract_base_model import BaseModel
 
 
 class CommunityPost(models.Model, BaseModel):

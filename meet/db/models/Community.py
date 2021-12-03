@@ -6,7 +6,7 @@ from .Community_project_model import CommunityProject
 from .community_post_model import CommunityPost
 
 
-class Community(models.Model, BaseModel):
+class Community(models.Model):
     # user = models.ForeignKey(User, on_delete=SET_NULL)
     community_name = models.CharField(max_length=50)
     community_project = models.ForeignKey(CommunityProject)
