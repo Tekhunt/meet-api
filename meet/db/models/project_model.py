@@ -1,6 +1,9 @@
 from django.db import models
+from .user_model import User
+from .abstract_base_model import BaseModel
 
-class UserProjects(models.Model):
+
+class UserProjects(models.Model, BaseModel):
     STATE = [
         ('Completed', 'Completed'),
         ('Ongoing', 'Ongoing')
@@ -10,5 +13,3 @@ class UserProjects(models.Model):
     description = models.CharField(max_length=250)
     project_url = models.URLField()
     status = models.CharField(max_length=15, choices=STATE)
-    
-    
