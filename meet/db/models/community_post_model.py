@@ -1,4 +1,5 @@
 from django.db import models
+from .user_model import User
 
 class CommunityPost(models.Model):
     title = models.CharField(max_length=200)
