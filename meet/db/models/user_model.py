@@ -50,7 +50,7 @@ class User(AbstractBaseUser, BaseModel, PermissionsMixin):
     last_name = models.CharField(max_length=100)
     sex = models.CharField(max_length=10, choices=SEX)
     email = models.EmailField()
-    about = models.TextField()
+    about = models.CharField(max_length=300)
     image = models.ImageField()
     github = models.URLField()
     linkedin = models.URLField()
